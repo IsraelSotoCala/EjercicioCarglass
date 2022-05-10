@@ -1,0 +1,10 @@
+.cmp-cards{
+    
+    width: 100%;
+    height: 660px;
+    background-color: aqua;
+    .cards{
+        display: flex;
+    flex-direction: row;
+    }
+}
