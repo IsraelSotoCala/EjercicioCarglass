@@ -1,0 +1,74 @@
+@import "../../../_scss/variables/colors";
+.cmp-header {
+    width: 100%;
+    .header-movil {
+        display: none;
+        justify-content: space-between;
+        background-color: map-get($colors, black);
+        .menu-hamburguesa {
+            margin: 0 4% 0 4%;
+        }
+        .logo-movil {
+            width: 100px;
+            margin-left: 10%;
+        }
+        .iconos-contactos-movil {
+            margin: 1% 3% 1% 3%;
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+    .header-escritorio {
+        display: flex;
+        justify-content: space-between;
+        .logo-escritorio {
+            margin-left: 10%;
+        }
+        .contactos {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 10%;
+            .contactos-info {
+                display: flex;
+                align-items: center;
+                .telefono {
+                    margin-right: 5px;
+                }
+                span {
+                    margin-left: 20px;
+                }
+            }
+        }
+    }
+    .barra-navegacion {
+        display: flex;
+        background-color: map-get($colors, black);
+        justify-content: center;
+        align-items: center;
+        a {
+            color: map-get($colors, white);
+            text-decoration: none;
+            font-size: 16px;
+            padding: 1% 2% 1% 1%;
+            border-right: solid 1px white;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .cmp-header {
+        .header-escritorio {
+            display: none;
+        }
+        .barra-navegacion {
+            display: none;
+        }
+        .header-movil {
+            display: flex;
+        }
+    }
+}
