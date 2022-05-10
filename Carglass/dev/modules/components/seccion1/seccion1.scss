@@ -1,0 +1,71 @@
+@import "../../../_scss/variables/colors";
+.cmp-seccion1 {
+    width: 100%;
+    height: 600px;
+    background: no-repeat url('../../../../assets/img/imagen1.jpg');
+    background-size: cover;
+    .contenido-seccion1 {
+        width: 650px;
+        display: flex;
+        flex-direction: column;
+        background-color: map-get($colors, light-grey-carglass);
+        opacity: 0.9;
+        z-index: 1;
+        position: absolute;
+        top: 2.5%;
+        right: 7.5%;
+        h2 {
+            font-size: 36px;
+            color: map-get($colors, red-carglass);
+            margin-left: 40px;
+            margin-top: 25px;
+        }
+        .info-seccion1 {
+            display: flex;
+            flex-direction: column;
+            margin: 30px 45px 30px 45px;
+            h4 {
+                font-weight: bold;
+                margin-bottom: 5px;
+            }
+        }
+        .pedir-cita {
+            display: flex;
+            justify-content: center;
+            align-self: flex-end;
+            background-color: map-get($colors, green-carglass);
+            width: 200px;
+            margin: 50px 25px 50px 25px;
+            padding: 25px 65px 25px 65px;
+            border-radius: 5px;
+            a {
+                font-size: 30px;
+                color: map-get($colors, white);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cmp-seccion1 {
+        .imagen-seccion1 {
+            width: 100%;
+        }
+        .contenido-seccion1 {
+            width: 350px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -65%);
+            h2 {
+                margin-left: 20px;
+            }
+            .info-seccion1 {
+                margin: 30px 25px 30px 25px;
+            }
+            .pedir-cita {
+                margin: 30px 10px 30px 10px;
+            }
+        }
+    }
+}
