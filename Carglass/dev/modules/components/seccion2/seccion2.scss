@@ -1,0 +1,67 @@
+@import "../../../_scss/variables/colors";
+.cmp-seccion2 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 300px;
+    background: no-repeat url('../../../../assets/img/imagen2.svg');
+    background-size: cover;
+    .seccion2-titulo {
+        font-size: 48px;
+        color: map-get($colors, white);
+        margin-top: 40px;
+        margin-left: 200px;
+    }
+    .seccion2-info {
+        font-size: 30px;
+        margin-top: 20px;
+        margin-left: 200px;
+        color: map-get($colors, white);
+    }
+    .pedir-cita {
+        display: flex;
+        justify-content: center;
+        align-self: flex-end;
+        background-color: map-get($colors, green-carglass);
+        width: 200px;
+        margin: 50px 150px 50px 0px;
+        padding: 15px 65px 15px 65px;
+        border-radius: 5px;
+        a {
+            font-size: 30px;
+            color: map-get($colors, white);
+            text-decoration: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1150px) {
+    .cmp-seccion2 {
+        min-width: 375px;
+        .seccion2-titulo {
+            font-size: 28px;
+        }
+        .seccion2-info {
+            font-size: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .cmp-seccion2 {
+        .seccion2-titulo {
+            margin-left: 25px;
+        }
+        .seccion2-info {
+            margin-left: 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cmp-seccion2 {
+        .pedir-cita {
+            margin: 30px 25px 50px 0;
+        }
+    }
+}
