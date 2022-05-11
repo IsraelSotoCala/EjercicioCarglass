@@ -7,7 +7,7 @@
         flex-direction: row;
         background-color: map-get($colors, black );
         width: 100%;
-        height: auto;
+        height: 100%;
         color:map-get($colors, white );
 
         .logos{
@@ -53,13 +53,13 @@
                     font-family:OpenSans-Semibold;
                 }
                 li{
-                    font-family:OpenSans;
+                    
                     margin-bottom: 10px;
                     font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: normal;
+                    letter-spacing: normal;
                 }
             }
         }
@@ -111,9 +111,9 @@
         .mainfooter{
             display: flex;
             flex-direction: column;
-            height: auto;
+            height: 100%;
             .logos{
-                margin-left: 50px;
+                margin-left: 30px;
                 img{
                     margin-left: 50px;
                 }

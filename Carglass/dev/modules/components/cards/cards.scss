@@ -61,7 +61,7 @@
 
             .bodycard{
                 background-color: map-get($colors, light-grey-carglass);
-                height: auto;
+                height: 100%;
                 width: 100%;
                 
                 div{
@@ -72,7 +72,7 @@
                 span{
                     
                     font-size: 14px;
-                    font-family: OpenSans;
+                    
                     h4{
                         margin-bottom: -10px;
                         font-family: OpenSans-Semibold;
@@ -161,23 +161,24 @@
    
 }
 
-// @media screen and (max-width: 375px) {
-//     .cmp-cards{
-//         width: 375px;
-    
-//     .cards{
-//         margin-left: 10px;
-//         display: flex;
-//         flex-direction: column;
+@media screen and (max-width: 375px) {
+    .cmp-cards{
         
-//         .card{
-//             width: 337px;
-//             margin-top: 10px;
-//             margin-right: 10px;
-//             margin-left: 10px;
-//         }
-//     }
-//     }
+    
+    .cards{
+       
+        display: flex;
+        flex-direction: column;
+        
+        .card{
+            width: 337px;
+            margin-top: 10px;
+            margin-left: -18px;
+            margin-right: 10px;
+            
+        }
+    }
+    }
 
 
-//     }
+    }
