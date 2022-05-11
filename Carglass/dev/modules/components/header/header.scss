@@ -1,4 +1,5 @@
 @import "../../../_scss/variables/colors";
+@import "../../../_scss/utilities/fonts";
 .cmp-header {
     width: 100%;
     .header-movil {
@@ -30,7 +31,8 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            font-weight: bold;
+            font-family: OpenSans-Bold;
+            font-size: 24px;
             margin-right: 10%;
             .contactos-info {
                 display: flex;
@@ -52,6 +54,7 @@
         a {
             color: map-get($colors, white);
             text-decoration: none;
+            font-family: OpenSans;
             font-size: 16px;
             padding: 1% 2% 1% 1%;
             border-right: solid 1px white;
