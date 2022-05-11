@@ -10,16 +10,17 @@
     .contenido-seccionvideo {
         display: flex;
         flex-direction: column;
+        margin-bottom: 17px;
         h4 {
             font-family: OpenSans-Semibold;
             color: map-get($colors, red-carglass);
             font-size: 24px;
+            margin-bottom: 30px;
         }
         video {
             width: 100%;
             height: auto;
-            min-width: 336px;
-            min-height: 204px;
+       
         }
     }
     .info-seccionvideo {
@@ -42,13 +43,13 @@
                 margin-bottom: 10px;
             }
             span {
-                font-family: OpenSans;
+                
                 font-size: 14px;
             }
             ul {
                 list-style: disc;
                 li {
-                    font-family: OpenSans;
+                    
                     font-size: 14px;
                     margin-left: 20px;
                     margin-bottom: 5px;
