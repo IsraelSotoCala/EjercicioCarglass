@@ -1,0 +1,66 @@
+@import "../../../_scss/variables/colors";
+.cmp-seccionvideo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: map-get($colors, light-grey-carglass);
+    margin: 42px 208px 94px 211px;
+    padding: 18px 32px 28px 22px;
+    .contenido-seccionvideo {
+        display: flex;
+        flex-direction: column;
+        h4 {
+            color: map-get($colors, red-carglass);
+            font-size: 24px;
+        }
+        video {
+            width: 100%;
+            height: auto;
+            min-width: 336px;
+            min-height: 204px;
+        }
+    }
+    .info-seccionvideo {
+        display: flex;
+        flex-direction: column;
+        background-color: map-get($colors, white);
+        margin: 9px 0 0 27px;
+        padding: 18px 35px 52px 31px;
+        h4 {
+            color: map-get($colors, red-carglass);
+            font-size: 24px;
+        }
+        .contenido-info {
+            margin-top: 25px;
+            margin-bottom: 25px;
+            .seccionvideo-subtitulos {
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
+            ul {
+                list-style: disc;
+                li {
+                    margin-left: 20px;
+                    margin-bottom: 5px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .cmp-seccionvideo {
+        flex-direction: column;
+        margin: 10px;
+        padding: 10px;
+        .contenido-seccionvideo {
+            margin: 20px;
+            video {
+                margin-top: 10px;
+            }
+        }
+        .info-seccionvideo {
+            margin: 20px;
+        }
+    }
+}
