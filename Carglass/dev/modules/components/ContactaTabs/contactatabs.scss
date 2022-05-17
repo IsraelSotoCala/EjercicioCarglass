@@ -1,0 +1,129 @@
+@import "../../../_scss/variables/colors";
+@import "../../../_scss/utilities/fonts";
+body{
+    margin: 0;
+}
+.cmp-cardtabs{
+    
+    // width: 100%;
+    // height: 2000px;
+    .mainContainer{
+
+        height: auto;
+        width: 100%;
+        background-color: map-get($colors, contact-grey);
+        display: flex;
+        flex-direction: column;
+
+        .tabs{
+           max-width: 1502px;
+            height: auto;
+            
+            display: flex;
+            flex-direction: row;
+            padding: 30px;
+            gap: 30px;
+            .tab{
+                overflow: hidden;
+                flex:1;
+                padding: 19px 73px 30px;
+                height: auto;
+                background-color: map-get($colors, white);
+                p{
+                    text-align: center;
+                    font-family: OpenSans-Bold;
+                    font-size: 18px;
+                    color: map-get($colors, red-carglass) ;
+                    
+                    margin-top: 15px;
+
+                }
+                .round-container{
+                    width: 70%;
+                    height: 55%;
+                    border: map-get($colors, red-carglass) 3px solid;
+                    border-radius: 50%;
+                    margin-left: 12px;
+
+
+                img{
+                    margin-left: 13px;
+                    width: 73px;
+                    height: 100px;
+                }
+            }
+            &.active{
+                border-bottom: 3px solid map-get($colors, red-carglass);
+                margin: -2px;
+            }
+            }
+        }
+
+        .contents{
+            width: 100%;
+            height: auto;
+            .content{
+                padding: 40px;
+                overflow: hidden;
+                display:flex ;
+                width: auto;
+                height: auto;
+                display: none;
+                margin-left: 28px;
+                margin-right: 30px;
+                margin-top: -28px;
+                background-color: map-get($colors, white);
+                &.active{
+                    display: block;
+                    
+                   
+                }
+              .content-info{
+                  display: flex;
+                  flex-direction: row;
+                  width: 75%;
+                  height: auto;
+                  margin-top: 10px;
+                  margin-left: 10px;
+                  color: map-get($colors, light-black );
+                  &.ctnt-2{
+                      width: 100%;
+                      margin-bottom: 50px;
+                  }
+                  .info-text{
+                      display: flex;
+                      flex-direction: column;
+                      &.ctnt-2{
+                          margin-left: 45px;
+                      }
+                  h4{
+                      margin-top: 20px;
+                      font-size: 14px;
+                      font-family: Opensans-Bold;
+                  }
+                  p{
+                      font-size: 14px;
+                      font-family: Opensans-Regular;
+                  }
+                  a{
+                      color: map-get($colors, red-carglass);
+                      margin-top: 114px;
+                      font-family: Opensans-Semibold;
+                      font-size: 14px;
+                  }
+                  h3{
+                    color: map-get($colors, red-carglass);
+                    font-size: 18px;
+                    font-family: Opensans-Bold;
+                  }
+                }
+
+                img{
+                    width: 300px;
+                    height: 220px;
+                }
+              }
+            }
+        }
+    }
+}
