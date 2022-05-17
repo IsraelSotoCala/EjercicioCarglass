@@ -1,0 +1,168 @@
+@import "../../../_scss/variables/colors";
+@import "../../../_scss/utilities/fonts";
+.cmp-accordionContacta {
+    margin: 75px 208px 32px 210px;
+    padding: 30px 34px 44px 30px;
+    background-color: gray;
+    .accordion {
+        display: flex;
+        flex-direction: column;
+        .desplegable {
+            margin: 17px 5px 20px 0;
+            padding: 45px 48px 44px 57px;
+            label {
+                border-radius: 0;
+                cursor: pointer;
+                display: flex;
+                justify-content: space-between;
+                background-color: map-get($colors, white);
+                padding: 10px;
+            }
+            .texto-desplegable {
+                display: flex;
+                flex-direction: column;
+                h4 {
+                    margin: 12px 0 14px 38px;
+                    font-family: OpenSans-Bold;
+                    font-size: 18px;
+                    color: map-get($colors, red-carglass);
+                }
+                span {
+                    margin: 14px 0 13px 38px;
+                    font-size: 14px;
+                }
+            }
+            .icon-seccion {
+                width: 100px;
+                height: 100px;
+                padding: 19px 23.8px 19.6px 24px;
+                border: solid 2.5px #d0021b;
+                border-radius: 50%;
+            }
+            .icon-arrow {
+                margin: 35px 48px 29px 137px;
+            }
+            .contenido {
+                background-color: map-get($colors, white);
+                max-height: 0px;
+                overflow: hidden;
+            }
+            .check {
+                display: none;
+                &:checked {
+                    &~.contenido {
+                        display: flex;
+                        flex-direction: column;
+                        max-height: 750px;
+                        padding: 10px;
+                        .contenedor-datos {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: center;
+                            margin-left: 125px;
+                            .seccion-datos {
+                                display: flex;
+                                flex-direction: column;
+                                span {
+                                    font-size: 14px;
+                                }
+                                .input-imagen {
+                                    margin: 5px 29px 42px 0;
+                                    padding: 12px 120px 11px 14px;
+                                    border-radius: 3px;
+                                    border: solid 1px #d4d3d3;
+                                    img {
+                                        width: 15px;
+                                        margin-bottom: -4px;
+                                    }
+                                    input {
+                                        border: none;
+                                    }
+                                }
+                            }
+                            &+label .icon-arrow {
+                                transform: rotate(180deg);
+                            }
+                        }
+                        .seccion-mensaje {
+                            display: flex;
+                            flex-direction: column;
+                            align-self: center;
+                            margin-left: 96px;
+                            span {
+                                margin: 42px 110px 5px 1px;
+                                font-size: 14px;
+                            }
+                            .textarea-imagen {
+                                border-radius: 3px;
+                                border: solid 1px #d4d3d3;
+                                img {
+                                    display: flex;
+                                    margin: 5px;
+                                    width: 15px;
+                                    rotate: 90deg;
+                                }
+                                .txtarea-no-resize {
+                                    resize: none;
+                                    border: none;
+                                    margin: 5px 0 43.8px;
+                                    padding: 10px 828px 60px 38px;
+                                }
+                            }
+                        }
+                        .acuerdo {
+                            margin: 43.8px 125px 14.3px 0;
+                            font-size: 14px;
+                            margin-left: 190px;
+                        }
+                        .politica-privacidad {
+                            display: flex;
+                            margin-left: 185px;
+                            input {
+                                margin-top: 12px;
+                            }
+                            a {
+                                color: map-get($colors, red-carglass);
+                            }
+                        }
+                        .enviar {
+                            display: flex;
+                            justify-content: center;
+                            align-self: flex-end;
+                            background-color: map-get($colors, green-carglass);
+                            width: 200px;
+                            margin: 6px 90px 45px 156px;
+                            padding: 10px 48px 9px 49px;
+                            border-radius: 36.5px;
+                            a {
+                                font-family: Opensans-Bold;
+                                font-size: 30px;
+                                color: map-get($colors, white);
+                                text-decoration: none;
+                            }
+                        }
+                        .queja {
+                            display: flex;
+                            flex-direction: column;
+                            align-self: center;
+                            margin-left: 70px;
+                            font-size: 14px;
+                            h4 {
+                                font-family: OpenSans-Bold;
+                            }
+                            span {
+                                margin-top: 18px;
+                            }
+                            ul {
+                                margin-top: 14px;
+                                margin-left: 50px;
+                                margin-bottom: 40px;
+                                list-style: disc;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
