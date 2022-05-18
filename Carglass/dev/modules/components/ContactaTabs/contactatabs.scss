@@ -13,7 +13,7 @@ body{
 
         height: auto;
         width: 100%;
-        background-color: map-get($colors, contact-grey);
+        // background-color: map-get($colors, contact-grey);
         margin-top: 50px;
         display: flex;
         flex-direction: column;
@@ -213,15 +213,15 @@ body{
     }
 }
 
-@media screen and (max-width: 1281px) {
+@media screen and (max-width: 1781px) {
     .cmp-cardtabs{
-     margin-left: 0px;
+     margin-left: 30px;
         
      .mainContainer{
          .tabs{
              .tab{
                  .round-container{
-                    margin-left: 12px;
+                    margin-left: 100px;
                  }
              }
          }
