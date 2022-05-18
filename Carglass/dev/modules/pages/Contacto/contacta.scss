@@ -1,0 +1,7 @@
+@import "../../../_scss/variables/colors";
+.cmp-Contacta{
+    .bodyContent{
+         background-color: map-get($colors, contact-grey);
+        
+    }
+}

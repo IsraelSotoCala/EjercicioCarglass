@@ -1,0 +1,16 @@
+{% extends "../../../template/template.twig" %}
+
+{% block page %}
+
+    <div class="cmp-Contacta">
+        
+        {% include "../../components/header/header.twig" %}
+        <div class="bodyContent">
+            {% include "../../components/ContactaTabs/contactatabs.twig" %}
+            {% include "../../components/accordionContacta/accordionContacta.twig" %}
+        </div>
+        {% include "../../components/footer/footer.twig" %}
+    
+    </div>
+
+{% endblock %}

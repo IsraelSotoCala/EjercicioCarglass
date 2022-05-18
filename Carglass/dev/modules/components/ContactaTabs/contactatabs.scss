@@ -2,19 +2,23 @@
 @import "../../../_scss/utilities/fonts";
 body{
     margin: 0;
+    max-width: 1920px;
 }
 .cmp-cardtabs{
     
     // width: 100%;
     // height: 2000px;
+    margin-left: 200px;
     .mainContainer{
 
         height: auto;
         width: 100%;
         background-color: map-get($colors, contact-grey);
+        margin-top: 50px;
         display: flex;
         flex-direction: column;
-
+        
+        
         .tabs{
            max-width: 1502px;
             height: auto;
@@ -39,11 +43,12 @@ body{
 
                 }
                 .round-container{
-                    width: 70%;
-                    height: 55%;
+                    width: 100px;
+                    height: 100px;
                     border: map-get($colors, red-carglass) 3px solid;
                     border-radius: 50%;
-                    margin-left: 12px;
+                    
+                    margin-left: 47px;
 
 
                 img{
@@ -60,13 +65,16 @@ body{
         }
 
         .contents{
-            width: 100%;
+            width: auto;
             height: auto;
+            
+
             .content{
                 padding: 40px;
                 overflow: hidden;
                 display:flex ;
                 width: auto;
+                max-width: 1424px;
                 height: auto;
                 display: none;
                 margin-left: 28px;
@@ -90,6 +98,11 @@ body{
                       width: 100%;
                       margin-bottom: 50px;
                   }
+                  &.ctnt-4{
+                    width: 100%;
+                   margin-left: -10px;
+                   margin-top:50px
+                }
                   .info-text{
                       display: flex;
                       flex-direction: column;
@@ -116,14 +129,260 @@ body{
                     font-size: 18px;
                     font-family: Opensans-Bold;
                   }
+
+                  .info-form{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: row;
+                    .component-form{
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: 50px;
+                        input{
+                            border: solid 1px #d4d3d3;
+                            width: 321px;
+                            height: 44px;
+                        }
+                        button{
+                            border: none;
+                            margin-top:20px;
+                            background-color: map-get($colors, green-carglass);
+                            border-radius: 36.5px;
+                            color: white;
+                            padding: 10px 48px 9px 49px;
+                        }
+                    }
+
+                    
                 }
+                }
+
+                .round-container{
+                    width: 100px;
+                    height: 69px;
+                    border: map-get($colors, red-carglass) 3px solid;
+                    border-radius: 50%;
+                    margin-left: 12px;
+
+
+                img{
+                    margin-top: 10px;
+                    width: 73px;
+                    height: 50px;
+                }
+
+               
+            }
 
                 img{
                     width: 300px;
                     height: 220px;
                 }
+
+
+                .cardContact{
+                    padding: 26px 20px 21px 23px;
+                    margin-right: 20px;
+                    display: flex;
+                    width: 100%;
+                    height: auto;
+                    background-color:map-get($colors, contact-grey);
+                    overflow: hidden;
+                    img{
+                        width: 35px;
+                        height: 50px;
+                    }
+                    .cardContent{
+                        margin-left: 20px;
+                        width: 133px;
+                        margin-top: 8px;
+                        h3{
+                            color: black;
+                            font-size: 14px;
+                            font-family: Opensans-Bold;
+                        }
+                        h2{
+                            font-size:18px;
+                            font-family: Opensans-Bold;
+                        }
+                    }
+                }
               }
             }
         }
     }
+}
+
+@media screen and (max-width: 1281px) {
+    .cmp-cardtabs{
+     margin-left: 0px;
+        
+     .mainContainer{
+         .tabs{
+             .tab{
+                 .round-container{
+                    margin-left: 12px;
+                 }
+             }
+         }
+     }
+}
+
+
+}
+
+@media screen and (max-width: 1081px) {
+    .cmp-cardtabs{
+     margin-left: 0px;
+        
+     .mainContainer{
+         .tabs{
+             .tab{
+                 .round-container{
+                    margin-left: 0px;
+                 }
+             }
+         }
+
+         .contents{
+             .content{
+                 .content-info{
+                     flex-direction: column;
+
+                     img{
+                         width: 100%;
+                         margin-bottom: 10px;
+                     }
+
+                     .round-container{
+                         width: 77px;
+                     }
+                    .info-text{
+                        &.ctnt-2{
+                            margin-left: 0px;
+                        }
+                     .info-form{
+                         flex-direction: column;
+
+                         .component-form{
+                            input{
+                                border: solid 1px #d4d3d3;
+                                width: 100%;
+                                height: 44px;
+                            }                         
+                         }
+                     }
+                    }
+                 }
+             }
+         }
+     }
+}
+
+
+}
+
+@media screen and (max-width: 883px) {
+    .cmp-cardtabs{
+     margin-left: 0px;
+        
+     .mainContainer{
+         .tabs{
+             gap: 9px;
+             .tab{
+                padding: 0;
+       
+                 .round-container{
+                    margin-left: 51px;
+                    margin-top: 5px;
+                    width: 60px;
+                    height: 60px;
+                    img{
+                       
+                        width: 35px;
+                        height: 59px;
+                    }
+                 }
+                 p{
+                    margin-left: 2px;
+                    font-size: 12px;
+                    margin-bottom: 5px;
+                 }
+             }
+         }
+     }
+}
+
+
+}
+
+@media screen and (max-width: 540px) {
+    .cmp-cardtabs{
+     margin-left: 0px;
+        
+     .mainContainer{
+         .tabs{
+             .tab{
+                 .round-container{
+                    margin-left: 25px;
+                 }
+             }
+         }
+     }
+}
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+    .cmp-cardtabs{
+     margin-left: 0px;
+        
+     .mainContainer{
+         .tabs{
+             .tab{
+                 .round-container{
+                    margin-left: 16px;
+                 }
+             }
+         }
+     }
+}
+
+
+}
+
+@media screen and (max-width: 376px) {
+    .cmp-cardtabs{
+     margin-left: 0px;
+        
+     .mainContainer{
+         .tabs{
+             gap: 9px;
+             .tab{
+                padding: 0;
+                 .round-container{
+                       margin-left: 7px;
+                    margin-top: 5px;
+                    width: 50px;
+                    height: 50px;
+
+                    img{
+                       
+                        width: 27px;
+                        height: 50px;
+                    }
+                 }
+                 p{
+                    margin-left: 2px;
+                    font-size: 10px;
+                    margin-bottom: 5px;
+                 }
+             }
+         }
+     }
+}
+
+
 }
