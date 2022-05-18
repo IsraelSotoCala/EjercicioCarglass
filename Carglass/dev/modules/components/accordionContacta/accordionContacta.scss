@@ -5,11 +5,9 @@
     padding: 30px 34px 44px 30px;
     background-color: gray;
     max-width: 1920px;
-    min-width: 500px;
     .accordion {
         display: flex;
         flex-direction: column;
-        min-width: 500px;
         .desplegable {
             margin: 17px 5px 20px 0;
             padding: 45px 48px 44px 57px;
@@ -283,9 +281,56 @@
     }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 920px) {
     .cmp-accordionContacta {
-        margin: 75px 130px 32px 130px;
-        ;
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .icon-arrow {
+                    margin: 35px 40px 29px 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .check:checked~ {
+                    .contenido {
+                        .enviar {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 450px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .icon-seccion {
+                    width: 50px;
+                    height: 50px;
+                }
+                .check:checked~ {
+                    .contenido {
+                        .enviar {
+                            width: 120px;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
