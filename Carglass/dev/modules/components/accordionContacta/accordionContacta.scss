@@ -4,9 +4,12 @@
     margin: 75px 208px 32px 210px;
     padding: 30px 34px 44px 30px;
     background-color: gray;
+    max-width: 1920px;
+    min-width: 500px;
     .accordion {
         display: flex;
         flex-direction: column;
+        min-width: 500px;
         .desplegable {
             margin: 17px 5px 20px 0;
             padding: 45px 48px 44px 57px;
@@ -44,16 +47,17 @@
             }
             .contenido {
                 background-color: map-get($colors, white);
-                max-height: 0px;
-                overflow: hidden;
+                display: none;
             }
             .check {
                 display: none;
                 &:checked {
+                    &+label .icon-arrow {
+                        transform: rotate(180deg);
+                    }
                     &~.contenido {
                         display: flex;
                         flex-direction: column;
-                        max-height: 750px;
                         padding: 10px;
                         .contenedor-datos {
                             display: flex;
@@ -80,34 +84,31 @@
                                     }
                                 }
                             }
-                            &+label .icon-arrow {
-                                transform: rotate(180deg);
-                            }
                         }
                         .seccion-mensaje {
                             display: flex;
                             flex-direction: column;
-                            align-self: center;
-                            margin-left: 96px;
-                            span {
-                                margin: 42px 110px 5px 1px;
-                                font-size: 14px;
+                            margin-left: 190px;
+                        }
+                        span {
+                            margin: 42px 110px 5px 1px;
+                            font-size: 14px;
+                        }
+                        .textarea-imagen {
+                            border-radius: 3px;
+                            border: solid 1px #d4d3d3;
+                            width: 92%;
+                            img {
+                                display: flex;
+                                margin: 5px;
+                                width: 15px;
+                                rotate: 90deg;
                             }
-                            .textarea-imagen {
-                                border-radius: 3px;
-                                border: solid 1px #d4d3d3;
-                                img {
-                                    display: flex;
-                                    margin: 5px;
-                                    width: 15px;
-                                    rotate: 90deg;
-                                }
-                                .txtarea-no-resize {
-                                    resize: none;
-                                    border: none;
-                                    margin: 5px 0 43.8px;
-                                    padding: 10px 828px 60px 38px;
-                                }
+                            .txtarea-no-resize {
+                                resize: none;
+                                border: none;
+                                margin: 5px 0 43.8px;
+                                width: 99%;
                             }
                         }
                         .acuerdo {
@@ -164,5 +165,127 @@
                 }
             }
         }
+    }
+}
+
+@media screen and (max-width: 1750px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .check:checked~ {
+                    .contenido {
+                        span {
+                            margin: 10px 110px 5px 1px;
+                        }
+                        .contenedor-datos {
+                            flex-direction: column;
+                        }
+                        .seccion-mensaje {
+                            margin-left: 127px;
+                            width: 86%;
+                            span {
+                                margin: -18px 110px 5px 1px;
+                            }
+                            .textarea-imagen {
+                                width: 85%;
+                                .txtarea-no-resize {
+                                    width: 98%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .texto-desplegable {
+                    span {
+                        display: none;
+                    }
+                }
+                .check:checked~ {
+                    .contenido {
+                        .acuerdo {
+                            margin-left: 120px;
+                        }
+                        .enviar {
+                            align-self: center;
+                            margin: 30px 45px 45px 45px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .texto-desplegable {
+                    display: none;
+                }
+                .check:checked~ {
+                    .contenido {
+                        .seccion-mensaje {
+                            margin-left: 127px;
+                            width: 86%;
+                            span {
+                                margin: -18px 110px 5px 1px;
+                            }
+                            .textarea-imagen {
+                                width: 67%;
+                                .txtarea-no-resize {
+                                    width: 97%;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .cmp-accordionContacta {
+        .accordion {
+            .desplegable {
+                .check:checked~ {
+                    .contenido {
+                        .acuerdo {
+                            margin: 21.8px 21px 14.3px 0;
+                            margin-left: 47px;
+                        }
+                        .politica-privacidad {
+                            margin-left: 40px;
+                        }
+                        .contenedor-datos {
+                            .seccion-datos {
+                                margin-left: -80px;
+                            }
+                        }
+                        .seccion-mensaje {
+                            margin-left: 43px;
+                            width: 120%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 850px) {
+    .cmp-accordionContacta {
+        margin: 75px 130px 32px 130px;
+        ;
     }
 }
