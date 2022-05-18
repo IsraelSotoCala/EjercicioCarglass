@@ -3,7 +3,7 @@
 .cmp-accordionContacta {
     margin: 75px 208px 32px 210px;
     padding: 30px 34px 44px 30px;
-    background-color: gray;
+    // background-color: gray;
     max-width: 1920px;
     .accordion {
         display: flex;
@@ -180,7 +180,7 @@
                         }
                         .seccion-mensaje {
                             margin-left: 127px;
-                            width: 86%;
+                            width: 97%;
                             span {
                                 margin: -18px 110px 5px 1px;
                             }
@@ -198,17 +198,36 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1500px) {
     .cmp-accordionContacta {
         .accordion {
             .desplegable {
-                .texto-desplegable {
-                    span {
-                        display: none;
-                    }
-                }
                 .check:checked~ {
                     .contenido {
+                        .seccion-mensaje {
+                            width: 90%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .cmp-accordionContacta {
+        margin: 0;
+        .accordion {
+            .desplegable {
+                .check:checked~ {
+                    .contenido {
+                        .contenedor-datos {
+                            padding: 12px 0px 11px 14px;
+                            width: 84%;
+                            input {
+                                width: 99%;
+                            }
+                        }
                         .acuerdo {
                             margin-left: 120px;
                         }
@@ -227,14 +246,16 @@
     .cmp-accordionContacta {
         .accordion {
             .desplegable {
-                .texto-desplegable {
-                    display: none;
-                }
                 .check:checked~ {
                     .contenido {
+                        .contenedor-datos {
+                            .seccion-datos {
+                                width: 97%;
+                            }
+                        }
                         .seccion-mensaje {
                             margin-left: 127px;
-                            width: 86%;
+                            width: 97%;
                             span {
                                 margin: -18px 110px 5px 1px;
                             }
@@ -281,13 +302,21 @@
     }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 850px) {
     .cmp-accordionContacta {
-        margin: 0;
+        .accordion {
+            .desplegable {
+                .texto-desplegable {
+                    span {
+                        display: none;
+                    }
+                }
+            }
+        }
     }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 650px) {
     .cmp-accordionContacta {
         .accordion {
             .desplegable {
@@ -299,10 +328,13 @@
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
     .cmp-accordionContacta {
         .accordion {
             .desplegable {
+                .texto-desplegable {
+                    display: none;
+                }
                 .check:checked~ {
                     .contenido {
                         .enviar {
@@ -325,8 +357,26 @@
                 }
                 .check:checked~ {
                     .contenido {
+                        .contenedor-datos {
+                            .seccion-datos {
+                                margin-left: -110px;
+                            }
+                        }
+                        .seccion-mensaje {
+                            margin-left: 15px;
+                        }
+                        .politica-privacidad {
+                            margin-left: 0;
+                            label {
+                                display: flex;
+                                flex-direction: column;
+                            }
+                        }
                         .enviar {
-                            width: 120px;
+                            width: 70px;
+                        }
+                        .queja {
+                            margin-left: 5px;
                         }
                     }
                 }
