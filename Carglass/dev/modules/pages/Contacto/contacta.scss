@@ -2,6 +2,6 @@
 .cmp-Contacta{
     .bodyContent{
          background-color: map-get($colors, contact-grey);
-        
+        overflow: hidden;
     }
 }
