@@ -1,51 +1,65 @@
 @import "../../../_scss/variables/colors";
 @import "../../../_scss/utilities/fonts";
 .cmp-accordionContacta {
-    margin: 75px 208px 32px 210px;
-    padding: 30px 34px 44px 30px;
-    // background-color: gray;
-    max-width: 1920px;
+    display: flex;
+    margin: auto;
+    max-width: 1500px;
     .accordion {
         display: flex;
         flex-direction: column;
+        width: 100%;
         .desplegable {
-            margin: 17px 5px 20px 0;
-            padding: 45px 48px 44px 57px;
-            label {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            margin: 14px;
+            .contenido-superior {
                 border-radius: 0;
                 cursor: pointer;
                 display: flex;
                 justify-content: space-between;
                 background-color: map-get($colors, white);
-                padding: 10px;
-            }
-            .texto-desplegable {
-                display: flex;
-                flex-direction: column;
-                h4 {
-                    margin: 12px 0 14px 38px;
-                    font-family: OpenSans-Bold;
-                    font-size: 18px;
-                    color: map-get($colors, red-carglass);
+                padding: 30px;
+                gap: 40px;
+                .texto-desplegable {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    justify-content: center;
+                    h4 {
+                        font-family: OpenSans-Bold;
+                        font-size: 18px;
+                        color: map-get($colors, red-carglass);
+                    }
+                    span {
+                        font-size: 14px;
+                        max-width: 1050px;
+                    }
                 }
-                span {
-                    margin: 14px 0 13px 38px;
-                    font-size: 14px;
+                .icono-imagen {
+                    padding: 20px;
+                    border: solid 2.5px #d0021b;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    .icon-seccion {
+                        width: 100px;
+                        height: 100px;
+                    }
                 }
-            }
-            .icon-seccion {
-                width: 100px;
-                height: 100px;
-                padding: 19px 23.8px 19.6px 24px;
-                border: solid 2.5px #d0021b;
-                border-radius: 50%;
-            }
-            .icon-arrow {
-                margin: 35px 48px 29px 137px;
+                .icono-flecha {
+                    width: 145px;
+                    justify-content: center;
+                    display: flex;
+                    align-items: center;
+                }
             }
             .contenido {
                 background-color: map-get($colors, white);
                 display: none;
+                .vacio {
+                    width: 145px;
+                }
             }
             .check {
                 display: none;
@@ -55,110 +69,112 @@
                     }
                     &~.contenido {
                         display: flex;
-                        flex-direction: column;
                         padding: 10px;
                         .contenedor-datos {
+                            margin: auto;
+                            width: 100%;
                             display: flex;
                             flex-direction: row;
-                            justify-content: center;
-                            margin-left: 125px;
+                            gap: 40px;
+                            max-width: 1050px;
+                            flex-wrap: wrap;
                             .seccion-datos {
                                 display: flex;
                                 flex-direction: column;
+                                flex: 1 1 calc(33.33% - 40px);
+                                gap: 10px;
                                 span {
                                     font-size: 14px;
                                 }
                                 .input-imagen {
-                                    margin: 5px 29px 42px 0;
-                                    padding: 12px 120px 11px 14px;
+                                    display: flex;
+                                    padding: 5px;
                                     border-radius: 3px;
                                     border: solid 1px #d4d3d3;
                                     img {
                                         width: 15px;
-                                        margin-bottom: -4px;
                                     }
                                     input {
                                         border: none;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .seccion-mensaje {
+                                display: flex;
+                                flex-direction: column;
+                                flex: 1 1 100%;
+                                gap: 10px;
+                                span {
+                                    font-size: 14px;
+                                }
+                                .textarea-imagen {
+                                    display: flex;
+                                    padding: 5px;
+                                    border-radius: 3px;
+                                    border: solid 1px #d4d3d3;
+                                    img {
+                                        width: 15px;
+                                        height: 15px;
+                                        rotate: 90deg;
+                                    }
+                                    .txtarea-no-resize {
+                                        resize: none;
+                                        border: none;
+                                        width: 100%;
+                                    }
+                                }
+                            }
+                            .seccion-inferior {
+                                display: flex;
+                                flex-direction: column;
+                                gap: 20px;
+                                flex: 1;
+                                .acuerdo {
+                                    font-size: 14px;
+                                }
+                                .politica-privacidad {
+                                    display: flex;
+                                    align-items: baseline;
+                                    input {
+                                        width: 20px;
+                                        height: 20px;
+                                    }
+                                    .privacidad {
+                                        a {
+                                            color: map-get($colors, red-carglass);
+                                        }
+                                    }
+                                }
+                                .enviar {
+                                    display: flex;
+                                    justify-content: center;
+                                    align-self: flex-end;
+                                    background-color: map-get($colors, green-carglass);
+                                    padding: 10px 48px 9px 49px;
+                                    border-radius: 36.5px;
+                                    a {
+                                        font-family: Opensans-Bold;
+                                        font-size: 30px;
+                                        color: map-get($colors, white);
+                                        text-decoration: none;
+                                    }
+                                }
+                                .queja {
+                                    display: flex;
+                                    flex-direction: column;
+                                    font-size: 14px;
+                                    gap: 10px;
+                                    h4 {
+                                        font-family: OpenSans-Bold;
+                                    }
+                                    ul {
+                                        list-style: disc;
+                                        margin-left: 20px;
                                     }
                                 }
                             }
                         }
-                        .seccion-mensaje {
-                            display: flex;
-                            flex-direction: column;
-                            margin-left: 190px;
-                        }
-                        span {
-                            margin: 42px 110px 5px 1px;
-                            font-size: 14px;
-                        }
-                        .textarea-imagen {
-                            border-radius: 3px;
-                            border: solid 1px #d4d3d3;
-                            width: 92%;
-                            img {
-                                display: flex;
-                                margin: 5px;
-                                width: 15px;
-                                rotate: 90deg;
-                            }
-                            .txtarea-no-resize {
-                                resize: none;
-                                border: none;
-                                margin: 5px 0 43.8px;
-                                width: 99%;
-                            }
-                        }
-                        .acuerdo {
-                            margin: 43.8px 125px 14.3px 0;
-                            font-size: 14px;
-                            margin-left: 190px;
-                        }
-                        .politica-privacidad {
-                            display: flex;
-                            margin-left: 185px;
-                            input {
-                                margin-top: 12px;
-                            }
-                            a {
-                                color: map-get($colors, red-carglass);
-                            }
-                        }
-                        .enviar {
-                            display: flex;
-                            justify-content: center;
-                            align-self: flex-end;
-                            background-color: map-get($colors, green-carglass);
-                            width: 200px;
-                            margin: 6px 90px 45px 156px;
-                            padding: 10px 48px 9px 49px;
-                            border-radius: 36.5px;
-                            a {
-                                font-family: Opensans-Bold;
-                                font-size: 30px;
-                                color: map-get($colors, white);
-                                text-decoration: none;
-                            }
-                        }
-                        .queja {
-                            display: flex;
-                            flex-direction: column;
-                            align-self: center;
-                            margin-left: 70px;
-                            font-size: 14px;
-                            h4 {
-                                font-family: OpenSans-Bold;
-                            }
-                            span {
-                                margin-top: 18px;
-                            }
-                            ul {
-                                margin-top: 14px;
-                                margin-left: 50px;
-                                margin-bottom: 40px;
-                                list-style: disc;
-                            }
-                        }
                     }
                 }
             }
@@ -166,221 +182,28 @@
     }
 }
 
-@media screen and (max-width: 1750px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .check:checked~ {
-                    .contenido {
-                        span {
-                            margin: 10px 110px 5px 1px;
-                        }
-                        .contenedor-datos {
-                            flex-direction: column;
-                        }
-                        .seccion-mensaje {
-                            margin-left: 127px;
-                            width: 97%;
-                            span {
-                                margin: -18px 110px 5px 1px;
-                            }
-                            .textarea-imagen {
-                                width: 85%;
-                                .txtarea-no-resize {
-                                    width: 98%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+@media screen and (max-width:767px) {
+    .cmp-accordionContacta .accordion .desplegable .check:checked~.contenido .contenedor-datos {
+        flex-direction: column;
     }
 }
 
-@media screen and (max-width: 1500px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .check:checked~ {
-                    .contenido {
-                        .seccion-mensaje {
-                            width: 90%;
-                        }
-                    }
-                }
-            }
+@media screen and (max-width:600px) {
+    .cmp-accordionContacta .accordion .desplegable .contenido-superior .icono-imagen {
+        width: 50px;
+        height: 50px;
+        .icon-seccion {
+            width: 50px;
+            height: 50px;
         }
     }
-}
-
-@media screen and (max-width: 1200px) {
-    .cmp-accordionContacta {
-        margin: 0;
-        .accordion {
-            .desplegable {
-                .check:checked~ {
-                    .contenido {
-                        .contenedor-datos {
-                            padding: 12px 0px 11px 14px;
-                            width: 84%;
-                            input {
-                                width: 99%;
-                            }
-                        }
-                        .acuerdo {
-                            margin-left: 120px;
-                        }
-                        .enviar {
-                            align-self: center;
-                            margin: 30px 45px 45px 45px;
-                        }
-                    }
-                }
-            }
-        }
+    .cmp-accordionContacta .accordion .desplegable .contenido-superior .texto-desplegable {
+        width: 100px;
     }
-}
-
-@media screen and (max-width: 1100px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .check:checked~ {
-                    .contenido {
-                        .contenedor-datos {
-                            .seccion-datos {
-                                width: 97%;
-                            }
-                        }
-                        .seccion-mensaje {
-                            margin-left: 127px;
-                            width: 97%;
-                            span {
-                                margin: -18px 110px 5px 1px;
-                            }
-                            .textarea-imagen {
-                                width: 67%;
-                                .txtarea-no-resize {
-                                    width: 97%;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
+    .cmp-accordionContacta .accordion .desplegable .contenido-superior .texto-desplegable h4 {
+        font-size: 16px;
     }
-}
-
-@media screen and (max-width: 1000px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .check:checked~ {
-                    .contenido {
-                        .acuerdo {
-                            margin: 21.8px 21px 14.3px 0;
-                            margin-left: 47px;
-                        }
-                        .politica-privacidad {
-                            margin-left: 40px;
-                        }
-                        .contenedor-datos {
-                            .seccion-datos {
-                                margin-left: -80px;
-                            }
-                        }
-                        .seccion-mensaje {
-                            margin-left: 43px;
-                            width: 120%;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 850px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .texto-desplegable {
-                    span {
-                        display: none;
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 650px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .icon-arrow {
-                    margin: 35px 40px 29px 40px;
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 550px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .texto-desplegable {
-                    display: none;
-                }
-                .check:checked~ {
-                    .contenido {
-                        .enviar {
-                            width: 120px;
-                        }
-                    }
-                }
-            }
-        }
-    }
-}
-
-@media screen and (max-width: 450px) {
-    .cmp-accordionContacta {
-        .accordion {
-            .desplegable {
-                .icon-seccion {
-                    width: 50px;
-                    height: 50px;
-                }
-                .check:checked~ {
-                    .contenido {
-                        .contenedor-datos {
-                            .seccion-datos {
-                                margin-left: -110px;
-                            }
-                        }
-                        .seccion-mensaje {
-                            margin-left: 15px;
-                        }
-                        .politica-privacidad {
-                            margin-left: 0;
-                            label {
-                                display: flex;
-                                flex-direction: column;
-                            }
-                        }
-                        .enviar {
-                            width: 70px;
-                        }
-                        .queja {
-                            margin-left: 5px;
-                        }
-                    }
-                }
-            }
-        }
+    .cmp-accordionContacta .accordion .desplegable .contenido-superior .texto-desplegable span {
+        display: none;
     }
 }
