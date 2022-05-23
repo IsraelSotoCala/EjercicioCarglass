@@ -5,16 +5,13 @@ body{
     max-width: 1920px;
 }
 .cmp-cardtabs{
-    
-    // width: 100%;
-    // height: 2000px;
-    margin-left: 200px;
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
     .mainContainer{
         margin-top: 30px;
         height: auto;
         width: 100%;
-        // background-color: map-get($colors, contact-grey);
-        // margin-top: 50px;
         max-width: 1500px;
         display: flex;
         flex-direction: column;
@@ -26,7 +23,6 @@ body{
             
             display: flex;
             flex-direction: row;
-            // padding: 30px;
             gap: 30px;
             .tab{
                 overflow: hidden;
@@ -216,7 +212,7 @@ body{
 
 @media screen and (max-width: 1781px) {
     .cmp-cardtabs{
-     margin-left: 40px;
+   
         
      .mainContainer{
          .tabs{
@@ -234,7 +230,7 @@ body{
 
 @media screen and (max-width: 1081px) {
     .cmp-cardtabs{
-     margin-left: 0px;
+    
         
      .mainContainer{
          .tabs{
@@ -285,7 +281,7 @@ body{
 
 @media screen and (max-width: 1024px) {
     .cmp-cardtabs{
-     margin-left: 0px;
+    
         
      .mainContainer{
          .tabs{
@@ -355,7 +351,7 @@ body{
 
 @media screen and (max-width: 480px) {
     .cmp-cardtabs{
-     margin-left: 0px;
+    
         
      .mainContainer{
          .tabs{
@@ -373,7 +369,7 @@ body{
 
 @media screen and (max-width: 376px) {
     .cmp-cardtabs{
-     margin-left: 0px;
+    
         
      .mainContainer{
          .tabs{
